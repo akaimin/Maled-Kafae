@@ -1,0 +1,17 @@
+body {
+  background-color: #664343;
+}
+
+.banner {
+  background-color: #3b3030;
+  color: white;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtext {
+  color: gray;
+}
