@@ -2,6 +2,12 @@
   <head>
     <title>Maled Kafae</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function selectCoffee(choice) {
+        const selectionText = document.getElementById("selection-text");
+        selectionText.innerHTML = `You selected: <strong>${choice}</strong>`;
+      }
+    </script>
   </head>
   <body>
     <div class="banner">
@@ -11,6 +17,46 @@
         doorstep.
       </p>
     </div>
-    <p>Welcome to the home page.</p>
+    <div class="selection">
+      <div class="header-selection">
+        <h1 class="selection-header">Our Premium Selections</h1>
+        <p class="selection-subtext">
+          Discover our carefully curated collection of exceptional coffee beans.
+        </p>
+      </div>
+      <div class="choices">
+        <div
+          class="card"
+          id="a"
+          onclick="selectCoffee('Ethiopian Yirgacheffe')"
+        >
+          <h2>Ethiopian Yirgacheffe</h2>
+          <p>
+            Bright and fruity with notes of citrus, berries, and floral
+            undertones.
+          </p>
+        </div>
+        <div class="card" id="b" onclick="selectCoffee('Colombian Supremo')">
+          <h2>Colombian Supremo</h2>
+          <p>
+            Bright and fruity with notes of citrus, berries, and floral
+            undertones.
+          </p>
+        </div>
+        <div class="card" id="c" onclick="selectCoffee('Sumatra Mandheling')">
+          <h2>Sumatra Mandheling</h2>
+          <p>
+            Bright and fruity with notes of citrus, berries, and floral
+            undertones.
+          </p>
+        </div>
+      </div>
+      <p id="selection-text" class="selection-result">
+        Click on a coffee to select it.
+      </p>
+    </div>
+    <footer>
+      <h1>Patthadon</h1>
+    </footer>
   </body>
 </html>
