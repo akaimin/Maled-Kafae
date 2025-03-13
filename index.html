@@ -1,54 +1,63 @@
 <html>
   <head>
     <title>Maled Kafae</title>
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="BlackWhite.css" />
+    <link rel="stylesheet" href="Color.css" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>ฟอนต์ภาษาไทย Sarabun</title> -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+    </style>
+
     <script>
+      const beans = new Map();
+      beans.set("Arabica", "เมล็ดกาแฟอราบิก้าเป็นสายพันธุ์ที่นิยมปลูกมากที่สุดเป็นอันดับหนึ่งของโลกถึงร้อยละ 80 และคนไทยจะดื่มกาแฟชนิดนี้มากที่สุด เนื่องจากเป็นเมล็ดกาแฟที่ให้กลิ่นหอม และรสชาตินุ่มละมุนมีหลายมิติ อีกทั้งมีปริมาณคาเฟอีนที่ไม่สูงมาก อยู่ที่ 1.1 – 1.7 เปอร์เซ็นต์ จึงทำให้ดื่มง่ายกว่าเมล็ดกาแฟชนิดอื่นๆ <br><br>สามารถสังเกตเมล็ดกาแฟอราบิก้าได้จากลักษณะของเมล็ดที่ เรียวผอม เป็นทรงวงรีและมีเส้นตรงกลางโค้งคล้ายตัวอักษร “S” มีกลิ่นหอมหวานอบอวล คล้ายกลิ่นช็อกโกแลตและดอกไม้ผสมกัน ในส่วนของการเพาะปลูกนั้น ต้นกาแฟอาบิก้านั้นเติบโตได้ดีในสภาพอากาศที่เย็นและพื้นที่สูง โดยในประเทศไทยนิยมปลูกในเขตพื้นที่ทางภาคเหนือ เช่น เชียงใหม่ เชียงราย ตาก น่าน แม่ฮ่องสอน และลำปาง เป็นต้น ซึ่งสามารถผลิตได้ประมาณ 10,000 ตันต่อปี");
+      beans.set("Robusta", "โรบัสต้าเป็นกาแฟได้รับความนิยมรองจากอราบิก้า แต่เหมาะกับคอกาแฟที่ชอบความเข้มข้นเป็นอย่างมาก มีความเข้มและขมกว่าอราบิก้า ไม่ค่อยติดรสชาติเปรี้ยว บอดี้หนักแน่น มีระดับน้ำตาลและระดับกรดที่ต่ำ รสชาติจึงจะค่อนข้างฝาด และมีปริมาณคาเฟอีนอยู่ที่ 2 – 4.5 เปอร์เซ็นต์ สำหรับใครที่ไม่ชินเมื่อดื่มไปอาจมีการเวียนหัวได้เล็กน้อย เมล็ดกาแฟโรบัสต้าจึงนิยมนำไปทำเป็นกาแฟสำเร็จรูปหรือกาแฟแบบ 3 in 1 จำหน่ายตามร้านค้ามากกว่า <br><br>ลักษณะของเมล็ดโรบัสต้านั้นจะกลมมนและมีเส้นผ่าตรงกลางเป็นแนวตรง สำหรับการเพาะปลูกนั้น เรียกได้ว่าโรบัสต้าตรงข้ามกับอราบิก้า เพราะเป็นสายพันธุ์ที่ต้องการความชื้นสูงและพื้นที่ต่ำถึงจะเติบโตได้ดี โดยในประเทศไทยนั้นจะนิยมปลูกในจังหวัดทาางภาคใต้ อาทิ จังหวัดชุมพร สุราษฎร์ธานี และนครศรีธรรมราช เป็นต้น นอกจากนี้ กาแฟโรบัสต้าในประเทศไทยสามารถให้ผลผลิตได้มากถึง 70,000 ตันต่อปีเลยทีเดียว");
+      beans.set("Excelsa", "มาถึงสายพันธุ์ที่หลายคนอาจไม่คุ้นหู เมล็ดกาแฟสายพันธุ์เอ็กซ์เซลซ่านั้นมีถิ่นกำเนิดในทวีปแอฟริกา โดยลักษณะของเมล็ดนั้นจะคล้ายกับกาแฟโรบัสต้า กาแฟเอ็กซ์เซลซ่านี้ได้รับความนิยมในแอฟริกา แต่สำหรับในประเทศอื่นๆ ยังคงได้รับความนิยมไม่มากเท่าที่ควร เนื่องจากมีความเข้มข้นในเรื่องของรสชาติที่มากจนถึงขมพร่าเลยทีเดียว แต่ว่ากันว่าชาวแอฟริกันสามารถดื่มกาแฟชนิดนี้ได้ตลอดทั้งวัน <br><br>ความพิเศษของต้นกาแฟเอ็กซ์เซลซ่านั้นคือ การดูแลรักษาที่ง่าย ปลูกง่าย สามารถทนต่อความแห้งแล้ง ทนโรคที่เกิดจากต้นกาแฟได้ดีและสามารถทนทานต่อสภาพดินฟ้าอากาศที่เกิดการเปลี่ยนแปลงอยู่บ่อยๆ แถมยังให้ผลผลิตที่สูงอีกด้วย");
+      beans.set("Liberica", "กาแฟลิเบอริก้าเป็นอีกหนึ่งสายพันธุ์ที่ไม่ค่อยได้รับความนิยมในตลาดโลกมากนัก โดยคิดเป็นเพียง 1-2 เปอร์เซ็นต์ ของกาแฟทั้งโลกเท่านั้น เมล็ดกาแฟลิเบอริก้ามีถิ่นกำเนิดในไลบีเรียและไอวอรีโคสต์ โดยปัจจุบันมีมาเลเซียที่มีการปลูกกาแฟสายพันธุ์สายลิเบอริก้ามากถึง 90-95 เปอร์เซ็นต์ ของพื้นที่ปลูกทั่วประเทศ <br><br>กาแฟลิเบอริก้านั้นมีชื่อเรียกว่า “กาแฟใบใหญ่” เนื่องจากลักษณะของใบที่มีขนาดใหญ่กว่าสายพันธุ์อื่นๆ เติบโตได้ดีในสภาพอากาศร้อนชื้นและน้ำชุ่มๆ ลิเบอริก้ามีรสชาติใกล้เคียงกับอราบิก้าแต่มีรสเปรี้ยวอมหวานของผลเบอร์รี่มากกว่า จึงนิยมนำไป Blend กับกาแฟชนิดอื่นๆ เพื่อเพิ่มความเข้มข้นของรสชาตินั่นเอง");
+      
       function selectCoffee(choice) {
         const selectionText = document.getElementById("selection-text");
-        selectionText.innerHTML = `You selected: <strong>${choice}</strong>`;
+        selectionText.innerHTML = beans.get(choice);
       }
     </script>
   </head>
   <body>
     <div class="banner">
-      <h1>Exceptional Coffee Beans From Around the World</h1>
+      <h1>4 Types of Coffee Beans</h1>
       <p class="subtext">
-        Ethically sourced, expertly roasted, and delivered fresh to your
-        doorstep.
+        ว่ากันว่าคุณสมบัติของกาแฟที่มีคุณภาพจะต้องมีกลิ่นหอม รสสัมผัสที่จัดเจน และให้ความกลมกล่อม ซึ่งหากถามว่าเมล็ดกาแฟแบบไหนดี หลายๆ ท่านอาจนึกถึงเมล็ดกาแฟอราบิก้า (Arabica) ที่ได้รับความนิยมเป็นอันดับหนึ่งในบ้านเรา หรือบางท่านอาจชื่นชอบสายพันธุ์โรบัสต้า (Robusta) มากกว่า แต่ทราบหรือไม่ว่าสายพันธุ์เมล็ดกาแฟนั้นไม่ได้มีเพียงเท่านี้
       </p>
     </div>
     <div class="selection">
-      <div class="header-selection">
+      <!-- <div class="header-selection">
         <h1 class="selection-header">Our Premium Selections</h1>
         <p class="selection-subtext">
           Discover our carefully curated collection of exceptional coffee beans.
         </p>
-      </div>
+      </div> -->
       <div class="choices">
-        <div
-          class="card"
-          id="a"
-          onclick="selectCoffee('Ethiopian Yirgacheffe')"
-        >
-          <h2>Ethiopian Yirgacheffe</h2>
-          <p>
-            Bright and fruity with notes of citrus, berries, and floral
-            undertones.
-          </p>
+        <div class="card" id="a" onclick="selectCoffee('Arabica')">
+          <h2>Arabica</h2>
+          <p>สายพันธุ์อราบิก้า</p>
         </div>
-        <div class="card" id="b" onclick="selectCoffee('Colombian Supremo')">
-          <h2>Colombian Supremo</h2>
-          <p>
-            Bright and fruity with notes of citrus, berries, and floral
-            undertones.
-          </p>
+        <div class="card" id="b" onclick="selectCoffee('Robusta')">
+          <h2>Robusta</h2>
+          <p>สายพันธุ์โรบัสต้า</p>
         </div>
-        <div class="card" id="c" onclick="selectCoffee('Sumatra Mandheling')">
-          <h2>Sumatra Mandheling</h2>
-          <p>
-            Bright and fruity with notes of citrus, berries, and floral
-            undertones.
-          </p>
+        <div class="card" id="c" onclick="selectCoffee('Excelsa')">
+          <h2>Excelsa</h2>
+          <p>สายพันธุ์เอ็กซ์เซลซ่า</p>
+        </div>
+        <div class="card" id="c" onclick="selectCoffee('Liberica')">
+          <h2>Liberica</h2>
+          <p>สายพันธุ์ลิเบอริก้า</p>
         </div>
       </div>
       <p id="selection-text" class="selection-result">
@@ -56,7 +65,8 @@
       </p>
     </div>
     <footer>
-      <h1>Patthadon</h1>
+      <h1 class="subtext"> 6534450623 นายมินธาดา พวงมินธาดา</h1>
+      <h1 class="subtext"> 6534456423 นางสาววรดา วงศ์ทะยาน</h1>
     </footer>
   </body>
 </html>

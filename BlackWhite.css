@@ -1,0 +1,22 @@
+body {
+  background-color: white;
+}
+
+.banner {
+  background-color: dimgray;
+  color: whitesmoke;
+}
+
+.subtext {
+  color: whitesmoke;
+}
+
+.card:hover {
+  color: gray;
+}
+
+
+footer {
+  background-color: dimgray;
+}
+

@@ -1,0 +1,22 @@
+body {
+  background-color: #D6C0B3;
+}
+
+.banner {
+  background-color: #493628;
+  color: whitesmoke;
+}
+
+.subtext {
+  color: whitesmoke;
+}
+
+.card:hover {
+  color: #b0a695;
+}
+
+
+footer {
+  background-color: #493628;
+}
+

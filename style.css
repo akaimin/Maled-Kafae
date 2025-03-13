@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Sarabun', sans-serif;
+  min-height: 100vh; /* Ensures body takes full height */
+  overflow-y: auto;  /* Allows scrolling */
+  padding-bottom: 120px; /* Add padding to prevent overlap with footer */
+}
+
+.banner {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Keep text centered */
+  padding: 0 300px; /* Add padding on left and right */
+  
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.choices {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  scale: 1.1;
+}
+
+.card {
+  margin: 2px;
+}
+
+#selection-text {
+  margin-top: 40px;
+  text-align: center; /* Keep text centered */
+  padding: 0 100px; /* Add padding on left and right */
+}
+
+footer {
+  font-size: 9px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+}
+

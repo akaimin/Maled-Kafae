@@ -5,9 +5,9 @@ body {
 }
 
 .banner {
-  background-color: #3b3030;
+  background-color: #493628;
   color: white;
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,3 +55,4 @@ footer {
   background-color: #3b3030;
   width: 100%;
 }
+
